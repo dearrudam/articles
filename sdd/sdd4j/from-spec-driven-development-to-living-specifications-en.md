@@ -113,7 +113,7 @@ That does not make the specification useless. It simply means that it represents
 
 This leads us to a model that became increasingly important:
 
-![](spec-test-code-en.png)
+![](https://raw.githubusercontent.com/dearrudam/articles/refs/heads/main/sdd/sdd4j/spec-test-code-en.png)
 
 And yes, the arrows matter, because software evolves in both directions:
 
@@ -166,7 +166,7 @@ we can express something observable:
 
 By assigning a stable identifier to that requirement, we can establish a relationship such as:
 
-![](req-test-comp-en.png)
+![](https://raw.githubusercontent.com/dearrudam/articles/refs/heads/main/sdd/sdd4j/req-test-comp-en.png)
 
 The agent still has the freedom to reason about the implementation, but the expected behavior now has a deterministic verification boundary.
 
@@ -217,7 +217,7 @@ Instead of making the main specification workflow understand every possible arch
 
 Conceptually:
 
-![](sdd4j-arch-adapter.png)
+![](https://raw.githubusercontent.com/dearrudam/articles/refs/heads/main/sdd/sdd4j/sdd4j-arch-adapter.png)
 
 The core remains concerned with specifications, testable requirements, traceability, and convergence.
 
@@ -252,7 +252,7 @@ The same requirement presented earlier could therefore be expressed in an SDD4J 
 
 We preserve the same intent:
 
-![](req-test-comp-en.png)
+![](https://raw.githubusercontent.com/dearrudam/articles/refs/heads/main/sdd/sdd4j/req-test-comp-en.png)
 
 but in the language configured for the project.
 

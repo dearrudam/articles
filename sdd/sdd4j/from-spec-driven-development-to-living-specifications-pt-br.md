@@ -110,7 +110,7 @@ Isso não torna a especificação inútil. Significa apenas que ela representa u
 
 Isso nos leva a um modelo que se tornou cada vez mais importante:
 
-![Especificação->Testes->Código](spec-test-code-pt-br.png)
+![](https://raw.githubusercontent.com/dearrudam/articles/refs/heads/main/sdd/sdd4j/spec-test-code-pt-br.png)
 
 E sim, as setas aqui importam, porque software evolui nas duas direções:
 
@@ -165,7 +165,7 @@ podemos expressar algo observável:
 
 Ao dar um identificador estável para esse requisito, podemos estabelecer uma relação como:
 
-![**Requerimento -> Teste -> Comportamento**](req-test-comp-pt-br.png)
+![](https://raw.githubusercontent.com/dearrudam/articles/refs/heads/main/sdd/sdd4j/req-test-comp-pt-br.png)
 
 O agente continua tendo liberdade para raciocinar sobre a implementação, mas o comportamento esperado passa a ter uma fronteira determinística de verificação.
 
@@ -216,7 +216,7 @@ Em vez de fazer com que o workflow principal de especificação compreendesse to
 
 Conceitualmente:
 
-![](sdd4j-arch-adapter.png)
+![](https://raw.githubusercontent.com/dearrudam/articles/refs/heads/main/sdd/sdd4j/sdd4j-arch-adapter.png)
 
 O núcleo continua preocupado com especificações, requisitos testáveis, rastreabilidade e convergência.
 
@@ -251,7 +251,7 @@ Assim, o mesmo requisito apresentado anteriormente poderia ser expresso em um pr
 
 Mantemos, portanto, a mesma intenção:
 
-![](req-test-comp-pt-br.png)
+![](https://raw.githubusercontent.com/dearrudam/articles/refs/heads/main/sdd/sdd4j/req-test-comp-pt-br.png)
 
 mas no idioma configurado para o projeto.
 
