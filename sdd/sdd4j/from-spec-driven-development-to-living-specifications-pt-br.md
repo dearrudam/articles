@@ -28,7 +28,9 @@ O que chamou minha atenção foi a ideia de trazer disciplina de engenharia para
 
 O ciclo avançava progressivamente da intenção do produto até a implementação e sua verificação:
 
-![SLDD Flow](sldd-flow-pt-br.png)
+<p align="center">
+<img src="https://raw.githubusercontent.com/dearrudam/articles/refs/heads/main/sdd/sdd4j/sldd-flow-pt-br.png" width="400px" />
+</p>
 
 Em vez de entregar um prompt isolado para o agente e imediatamente pedir código, cada etapa produzia contexto para a próxima.
 
