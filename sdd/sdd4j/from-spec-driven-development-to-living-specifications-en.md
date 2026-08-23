@@ -1,5 +1,4 @@
 # From Spec-Driven Development to Living Specifications
-
 Coding agents have changed the speed at which we can produce software.
 
 But producing code faster does not automatically mean producing better software.
@@ -31,8 +30,9 @@ What caught my attention was the idea of bringing engineering discipline to AI-a
 The cycle progressed incrementally from product intent to implementation and verification:
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/dearrudam/articles/refs/heads/main/sdd/sdd4j/sldd-flow-en.png" width="400px" />
+<img src="https://raw.githubusercontent.com/dearrudam/articles/refs/heads/main/sdd/sdd4j/sldd-flow-pt-br.png" width="400px" />
 </p>
+
 
 
 Instead of giving the agent an isolated prompt and immediately asking for code, each step produced context for the next one.
@@ -113,7 +113,9 @@ That does not make the specification useless. It simply means that it represents
 
 This leads us to a model that became increasingly important:
 
-![](https://raw.githubusercontent.com/dearrudam/articles/refs/heads/main/sdd/sdd4j/spec-test-code-en.png)
+<p align="center">
+<img width="80%" src="https://raw.githubusercontent.com/dearrudam/articles/refs/heads/main/sdd/sdd4j/spec-test-code-en.png" />
+</p>
 
 And yes, the arrows matter, because software evolves in both directions:
 
@@ -166,7 +168,9 @@ we can express something observable:
 
 By assigning a stable identifier to that requirement, we can establish a relationship such as:
 
-![](https://raw.githubusercontent.com/dearrudam/articles/refs/heads/main/sdd/sdd4j/req-test-comp-en.png)
+<p align="center">
+<img width="80%" src="https://raw.githubusercontent.com/dearrudam/articles/refs/heads/main/sdd/sdd4j/req-test-comp-en.png" />
+</p>
 
 The agent still has the freedom to reason about the implementation, but the expected behavior now has a deterministic verification boundary.
 
@@ -217,7 +221,9 @@ Instead of making the main specification workflow understand every possible arch
 
 Conceptually:
 
-![](https://raw.githubusercontent.com/dearrudam/articles/refs/heads/main/sdd/sdd4j/sdd4j-arch-adapter.png)
+<p align="center">
+<img width="80%" src="https://raw.githubusercontent.com/dearrudam/articles/refs/heads/main/sdd/sdd4j/sdd4j-arch-adapter.png" />
+</p>
 
 The core remains concerned with specifications, testable requirements, traceability, and convergence.
 
@@ -252,7 +258,9 @@ The same requirement presented earlier could therefore be expressed in an SDD4J 
 
 We preserve the same intent:
 
-![](https://raw.githubusercontent.com/dearrudam/articles/refs/heads/main/sdd/sdd4j/req-test-comp-en.png)
+<p align="center">
+<img width="80%" src="https://raw.githubusercontent.com/dearrudam/articles/refs/heads/main/sdd/sdd4j/req-test-comp-en.png" />
+</p>
 
 but in the language configured for the project.
 
