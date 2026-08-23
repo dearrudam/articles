@@ -312,18 +312,6 @@ SDD4J deliberately anchors itself in the **Java ecosystem**.
 
 That gives us native mechanisms such as `package-info.java` and Javadoc, while allowing the architectural interpretation of a Business Component to vary through adapters.
 
-In simplified form:
-
-``` text
-SBCE
-  stable:    BCE architecture
-  variable:  technology through skills
-
-SDD4J
-  stable:    Java ecosystem
-  variable:  architecture through adapters
-```
-
 Neither is universally better.
 
 For a project already organized around BCE, SBCE may be the simpler and more natural choice.
