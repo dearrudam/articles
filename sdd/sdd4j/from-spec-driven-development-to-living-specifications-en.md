@@ -30,7 +30,10 @@ What caught my attention was the idea of bringing engineering discipline to AI-a
 
 The cycle progressed incrementally from product intent to implementation and verification:
 
-![](sldd-flow-en.png)
+<p align="center">
+<img src="https://raw.githubusercontent.com/dearrudam/articles/refs/heads/main/sdd/sdd4j/sldd-flow-en.png" width="400px" />
+</p>
+
 
 Instead of giving the agent an isolated prompt and immediately asking for code, each step produced context for the next one.
 
