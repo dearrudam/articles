@@ -1,4 +1,5 @@
-# From Spec-Driven Development to Living Specifications
+# From Spec-Driven Development to Living Specifications in Java Projects
+
 Coding agents have changed the speed at which we can produce software.
 
 But producing code faster does not automatically mean producing better software.
