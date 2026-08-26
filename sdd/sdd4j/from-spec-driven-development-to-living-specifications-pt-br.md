@@ -331,21 +331,17 @@ Hoje, a pergunta que considero mais interessante é:
 
 É isso que queremos dizer com uma **Living Specification**.
 
-SDD4J é o nosso experimento atual nessa direção.
+SDD4J é o nosso experimento atual nessa direção, e convidamos você a experimentá-lo conosco.
 
-Ele vai evoluir.
+O workflow se encontra no repositório [soujava/agent-skills](https://github.com/soujava/agent-skills), e você pode utilizá-lo em qualquer projeto Java. 
 
-Algumas de suas ideias podem se mostrar úteis.
+É open-source e gratuito, e estamos abertos a contribuições :smile:.
 
-Outras talvez desapareçam com o tempo.
+Acredito que ele vai evoluir, algumas de suas ideias podem se mostrar úteis e outras não. Mas, acima de tudo, espero que ele nos ajude a continuar em nossas explorações.
 
-E ferramentas melhores podem tornar partes do workflow desnecessárias.
+Até porque, nesse mundo onde agentes de código e modelos estão sempre mudando a forma como produzimos software, pode ser que o SDD4J se torne obsoleto e, estará tudo bem! Até porque workflows nunca deveriam ser artefatos permanentes, e sim continuar evoluindo!
 
-Tudo bem.
-
-Porque o workflow nunca deveria ser o artefato permanente.
-
-**O workflow é temporário. A intenção do software deve sobreviver ao workflow.**
+**Workflows podem ser temporários, mas a intenção do software deve sobreviver a qualquer workflow.**
 
 ---
 
@@ -360,6 +356,8 @@ Como você está utilizando especificações com agentes de código?
 Você trata a especificação como *source of truth* ou também já encontrou *drift* entre especificações e o código que realmente está em produção?
 
 Já experimentou Spec-Driven Development, SBCE, OpenSpec, Spec Kit ou alguma abordagem completamente diferente?
+
+E que tal experimentar o SDD4J em um projeto Java existente? Ele pode ser útil para você, ou talvez não. Mas, de qualquer forma, espero que ele possa inspirar novas ideias.
 
 E talvez a pergunta que mais me interessa:
 
