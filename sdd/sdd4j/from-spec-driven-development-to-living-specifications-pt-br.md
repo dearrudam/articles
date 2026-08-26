@@ -22,7 +22,7 @@ Mas, depois de experimentar essa abordagem, outra pergunta começou a parecer ma
 
 ## A promessa do Spec-Driven Development
 
-Uma das abordagens que influenciaram fortemente essa jornada veio da minha querida Java Champion [**Loiane Groner**](https://loiane.com/), por meio de seu artigo [*"Vibe Coding, But Production-Ready: A Specs-Driven Feedback Loop for AI-Assisted Development."*](https://loiane.com/2026/03/vibe-coding-with-specs-driven-feedback-loops/)
+Uma das abordagens que influenciaram fortemente essa jornada veio da minha querida Oracle ACE e Java Champion [**Loiane Groner**](https://loiane.com/), por meio de seu artigo [*"Vibe Coding, But Production-Ready: A Specs-Driven Feedback Loop for AI-Assisted Development."*](https://loiane.com/2026/03/vibe-coding-with-specs-driven-feedback-loops/)
 
 O que chamou minha atenção foi a ideia de trazer disciplina de engenharia para o desenvolvimento assistido por IA sem abrir mão da produtividade que os agentes de código poderiam proporcionar.
 
