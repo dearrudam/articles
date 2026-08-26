@@ -208,7 +208,7 @@ E ali surgiu uma nova oportunidade de experimentação.
 
 ---
 
-## SDD4J: adaptando a ideia aos projetos Java
+## SDD4J: Adaptando-se a mais de uma arquitetura em projetos Java
 
 A pergunta que queríamos explorar era relativamente simples:
 
@@ -236,7 +236,7 @@ Não queríamos que a adoção de Living Specifications exigisse primeiro a reor
 
 Logo, **o workflow deveria reconhecer o projeto como ele já é.**
 
-Em torno desse modelo, o SDD4J fornece um pequeno conjunto de operações:
+Em torno desse modelo, criamos o workflow [SDD4J](https://github.com/soujava/agent-skills). Ele fornece um pequeno conjunto de operações:
 
 -   **`/sdd4j setup`** estabelece o contexto do projeto, como arquitetura e idioma utilizado pelas especificações.
 -   **`/sdd4j new`** cria a especificação de um novo Business Component e seus requisitos testáveis.

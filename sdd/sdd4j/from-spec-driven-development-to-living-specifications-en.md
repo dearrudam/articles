@@ -212,7 +212,7 @@ And that created a new opportunity for experimentation.
 
 ---
 
-## SDD4J: Adapting the Idea to Java Projects
+## SDD4J: Adapting to more than one architecture in Java projects
 
 The question we wanted to explore was relatively simple:
 
@@ -220,7 +220,7 @@ The question we wanted to explore was relatively simple:
 
 Instead of making the main specification workflow understand every possible architecture, we introduced the idea of **architecture adapters**.
 
-Conceptually:
+Conceptually, the SDD4J workflow is divided into two parts:
 
 <p align="center">
 <img width="80%" src="https://raw.githubusercontent.com/dearrudam/articles/refs/heads/main/sdd/sdd4j/sdd4j-arch-adapter.png" />
@@ -242,7 +242,7 @@ We did not want adopting Living Specifications to require reorganizing an existi
 
 Therefore, **the workflow should recognize the project as it already is.**
 
-Around this model, SDD4J provides a small set of operations:
+Around this model, we create [SDD4J](https://github.com/soujava/agent-skills) workflow. It provides a small set of operations:
 
 -   **`/sdd4j setup`** establishes the project context, such as its architecture and the language used for specifications.
 -   **`/sdd4j new`** creates the specification for a new Business Component and its testable requirements.
