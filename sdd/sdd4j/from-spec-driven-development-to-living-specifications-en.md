@@ -305,19 +305,19 @@ We did not eliminate the trade-offs.
 
 **We chose different trade-offs.**
 
-SBCE deliberately anchors itself in **BCE**.
+SBCE deliberately anchors itself in **BCE** and it's stack neutral, which means, you can use it with Java stacks or any other stack like web-components.
 
 That gives it a clear definition of a Business Component while allowing technology-specific concerns to vary through skills.
 
-SDD4J deliberately anchors itself in the **Java ecosystem**.
+SDD4J deliberately anchors itself in the **Java ecosystem** accepting many architectural flavors.
 
 That gives us native mechanisms such as `package-info.java` and Javadoc, while allowing the architectural interpretation of a Business Component to vary through adapters.
 
 Neither is universally better.
 
-For a project already organized around BCE, SBCE may be the simpler and more natural choice.
+For a project already organized around BCE, despite the stack, SBCE may be the simpler and more natural choice.
 
-For an existing Java project organized differently, SDD4J explores another set of trade-offs.
+For an existing Java project organized differently, SDD4J may be an interesting choice. At the end of the day, we need to deal and choose trade-offs.
 
 And other SDD workflows solve other parts of the problem by choosing different constraints.
 
