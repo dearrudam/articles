@@ -36,7 +36,7 @@ Em vez de entregar um prompt isolado para o agente e imediatamente pedir código
 
 Conversando com um amigo da comunidade e também contribuidor opensource, [**Matheus Oliveira**](https://www.linkedin.com/in/omatheusmesmo/), decidimos colocar essas ideias em prática.
 
-Materializamos esse ciclo em um conjunto de Agent Skills que chamamos de **SLDD**.
+Materializamos esse ciclo em um conjunto de Agent Skills que chamamos de [**SLDD**](https://github.com/soujava/sldd-skills).
 
 E a primeira descoberta importante foi ver um workflow como esse funcionando do início ao fim.
 
@@ -56,7 +56,7 @@ Seu artigo fez mais do que nos apresentar uma abordagem interessante. Ele nos in
 
 ## O que aprendemos colocando tudo isso em prática
 
-À medida que continuamos experimentando com o SLDD e explorando outras abordagens de Spec-Driven Development, incluindo **OpenSpec** e **GitHub Spec Kit**, começamos a prestar menos atenção nas etapas individuais de cada workflow e mais atenção no modelo por trás delas.
+À medida que continuamos experimentando com o SLDD e explorando outras abordagens de Spec-Driven Development, incluindo including [**OpenSpec**](https://openspec.dev/) e [**GitHub Spec Kit**](https://github.github.com/spec-kit/), começamos a prestar menos atenção nas etapas individuais de cada workflow e mais atenção no modelo por trás delas.
 
 Especificações podem ser extremamente úteis enquanto uma mudança está acontecendo.
 

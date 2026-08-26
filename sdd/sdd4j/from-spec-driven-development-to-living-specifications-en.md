@@ -31,7 +31,7 @@ What caught my attention was the idea of bringing engineering discipline to AI-a
 The cycle progressed incrementally from product intent to implementation and verification:
 
 <p align="center">
-<img src="https://raw.githubusercontent.com/dearrudam/articles/refs/heads/main/sdd/sdd4j/sldd-flow-pt-br.png" width="400px" />
+<img src="https://raw.githubusercontent.com/dearrudam/articles/refs/heads/main/sdd/sdd4j/sldd-flow-en.png" width="400px" />
 </p>
 
 
@@ -40,7 +40,7 @@ Instead of giving the agent an isolated prompt and immediately asking for code, 
 
 Talking with a friend from the community and fellow open source contributor, [**Matheus Oliveira**](https://www.linkedin.com/in/omatheusmesmo/), we decided to put these ideas into practice.
 
-We materialized this cycle as a set of Agent Skills that we called **SLDD**.
+We materialized this cycle as a set of Agent Skills that we called [**SLDD**](https://github.com/soujava/sldd-skills).
 
 And the first important discovery was simply seeing a workflow like this operate from beginning to end.
 
@@ -60,7 +60,7 @@ Her article did more than introduce us to an interesting approach. It encouraged
 
 ## What We Learned by Putting It into Practice
 
-As we continued experimenting with SLDD and exploring other Spec-Driven Development approaches, including **OpenSpec** and **GitHub Spec Kit**, we started paying less attention to the individual steps of each workflow and more attention to the model behind them.
+As we continued experimenting with SLDD and exploring other Spec-Driven Development approaches, including [**OpenSpec**](https://openspec.dev/) and [**GitHub Spec Kit**](https://github.github.com/spec-kit/), we started paying less attention to the individual steps of each workflow and more attention to the model behind them.
 
 Specifications can be extremely useful while a change is happening.
 
@@ -161,11 +161,11 @@ Another important idea was expressing the behavior of a Business Component throu
 
 Instead of an ambiguous requirement such as:
 
-> The checkout should work correctly.
+> "The checkout should work correctly."
 
 we can express something observable:
 
-> When a checkout is requested for an empty cart, the BC shall reject the request.
+>"When a checkout is requested for an empty cart, the BC shall reject the request."
 
 By assigning a stable identifier to that requirement, we can establish a relationship such as:
 
@@ -255,7 +255,7 @@ This allows a project configured for PT-BR, for example, to keep its specificati
 
 The same requirement presented earlier could therefore be expressed in an SDD4J project configured for PT-BR as:
 
-> Quando um checkout for solicitado para um carrinho vazio, o BC deverá rejeitar a solicitação.
+>"Quando um checkout for solicitado para um carrinho vazio, o BC deverá rejeitar a solicitação."
 
 We preserve the same intent:
 
