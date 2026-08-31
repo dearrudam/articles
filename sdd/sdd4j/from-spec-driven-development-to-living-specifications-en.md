@@ -232,8 +232,8 @@ The adapter answers an architectural question:
 
 **Where is the Business Component in this project?**
 
--   In *package by feature*, the feature package itself can naturally provide that boundary.
 -   In BCE, the BCE structure already provides that boundary.
+-   In *package by feature*, the feature package itself can naturally provide that boundary.
 -   In *package by layer*, a business capability may be distributed across multiple technical packages, requiring a different mapping strategy.
 
 This is particularly important in *brownfield* development.
