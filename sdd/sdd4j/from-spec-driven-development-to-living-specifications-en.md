@@ -1,8 +1,6 @@
 # From Spec-Driven Development to Living Specifications in Java Projects
 
-Coding agents have changed the speed at which we can produce software.
-
-But producing code faster does not automatically mean producing better software.
+Coding agents have changed the speed at which we can produce software. But producing code faster does not automatically mean producing better software.
 
 As I started using agents more frequently in real-world software development, one question became increasingly important: **how do we give an agent enough freedom to be useful without losing engineering intent?**
 
@@ -12,7 +10,7 @@ On the other hand, merely describing an outcome and accepting any implementation
 
 There must be something between those two extremes.
 
-Specifications seem to be a promising answer to this question. They can make intent explicit before implementation, establish boundaries for the agent, and provide something against which the resulting software can be evaluated.
+Specifications seem to offer a promising answer. They can make intent explicit before implementation, establish boundaries for the agent, and provide something against which the resulting software can be evaluated.
 
 This is what we call **Spec-Driven Development**.
 
@@ -34,11 +32,9 @@ The cycle progressed incrementally from product intent to implementation and ver
 <img src="https://raw.githubusercontent.com/dearrudam/articles/refs/heads/main/sdd/sdd4j/sldd-flow-en.png" width="400px" />
 </p>
 
-
-
 Instead of giving the agent an isolated prompt and immediately asking for code, each step produced context for the next one.
 
-Talking with a friend from the community and fellow open source contributor, [**Matheus Oliveira**](https://www.linkedin.com/in/omatheusmesmo/), we decided to put these ideas into practice.
+Talking with a friend from the community and fellow open-source contributor, [**Matheus Oliveira**](https://www.linkedin.com/in/omatheusmesmo/), we decided to put these ideas into practice.
 
 We materialized this cycle as a set of Agent Skills that we called [**SLDD**](https://github.com/soujava/sldd-skills).
 
@@ -72,7 +68,7 @@ Multiple specification and design artifacts mean more context to produce, persis
 
 At some point, we noticed something uncomfortable in our own experiment:
 
-**the human was becoming part of the workflow's state machine, in other words, becoming the bottleneck of the process.**
+**the human was becoming part of the workflow's state machine — in other words, becoming the bottleneck of the process.**
 
 Instead of participating only when engineering judgment was necessary, sometimes we were simply allowing the process to move from one state to another.
 
@@ -108,9 +104,9 @@ As an expression of software intent, that can be an interesting idea, but there 
 
 That does not make the specification useless. It simply means that it represents a different kind of truth:
 
--   The specification describes the intended behavior.
--   The code implements the actual behavior.
--   Tests provide executable evidence connecting the two.
+* The specification describes the intended behavior.
+* The code implements the actual behavior.
+* Tests provide executable evidence connecting the two.
 
 This leads us to a model that became increasingly important:
 
@@ -120,8 +116,8 @@ This leads us to a model that became increasingly important:
 
 And yes, the arrows matter, because software evolves in both directions:
 
--   Sometimes, the implementation accidentally violates an existing requirement, and the code needs to converge toward the specification.
--   At other times, the implementation evolves intentionally, and the specification needs to follow that change.
+* Sometimes, the implementation accidentally violates an existing requirement, and the code needs to converge toward the specification.
+* At other times, the implementation evolves intentionally, and the specification needs to follow that change.
 
 This model allows the specification to become what we can call a **Living Specification**.
 
@@ -159,13 +155,15 @@ The specification becomes part of the same structural neighborhood as the code, 
 
 Another important idea was expressing the behavior of a Business Component through **testable and traceable requirements**, using structures inspired by [EARS](https://alistairmavin.com/ears/).
 
+In SBCE, these requirements are expressed in English.
+
 Instead of an ambiguous requirement such as:
 
-> "The checkout should work correctly."
+> The checkout should work correctly.
 
 we can express something observable:
 
->"When a checkout is requested for an empty cart, the BC shall reject the request."
+> When a checkout is requested for an empty cart, the Business Component shall reject the request.
 
 By assigning a stable identifier to that requirement, we can establish a relationship such as:
 
@@ -181,10 +179,10 @@ SBCE also reinforced another lesson for us:
 
 Its main workflow is deliberately small, providing two modes:
 
--   **`/sbce new`**
-    -   declares a *Business Component*, writing its specification into the package's `package-info.java`;
--   **`/sbce apply`**
-    -   works toward converging detected drift between specification and code.
+* **`/sbce new`**
+  * declares a *Business Component*, writing its specification into the package's `package-info.java`;
+* **`/sbce apply`**
+  * works toward converging detected drift between specification and code.
 
 Other concerns, such as coding conventions, can be delegated to composable skills rather than continuously expanding a huge set of instructions.
 
@@ -212,7 +210,7 @@ And that created a new opportunity for experimentation.
 
 ---
 
-## SDD4J: Adapting to more than one architecture in Java projects
+## SDD4J: Adapting to Multiple Architectures in Java Projects
 
 The question we wanted to explore was relatively simple:
 
@@ -220,7 +218,7 @@ The question we wanted to explore was relatively simple:
 
 Instead of making the main specification workflow understand every possible architecture, we introduced the idea of **architecture adapters**.
 
-Conceptually, the SDD4J workflow is divided into two parts:
+Conceptually:
 
 <p align="center">
 <img width="80%" src="https://raw.githubusercontent.com/dearrudam/articles/refs/heads/main/sdd/sdd4j/sdd4j-arch-adapter.png" />
@@ -232,9 +230,11 @@ The adapter answers an architectural question:
 
 **Where is the Business Component in this project?**
 
--   In BCE, the BCE structure already provides that boundary.
--   In *package by feature*, the feature package itself can naturally provide that boundary.
--   In *package by layer*, a business capability may be distributed across multiple technical packages, requiring a different mapping strategy.
+In SDD4J, a Business Component represents a business capability. What changes across architecture adapters is how that capability is located and bounded within the project's existing structure.
+
+* In BCE, the BCE structure already provides that boundary.
+* In *package by feature*, the feature package itself can naturally provide that boundary.
+* In *package by layer*, a business capability may be distributed across multiple technical packages, requiring a different mapping strategy.
 
 This is particularly important in *brownfield* development.
 
@@ -242,12 +242,12 @@ We did not want adopting Living Specifications to require reorganizing an existi
 
 Therefore, **the workflow should recognize the project as it already is.**
 
-Around this model, we create [SDD4J](https://github.com/soujava/agent-skills) workflow. It provides a small set of operations:
+Based on this model, we created the [SDD4J](https://github.com/soujava/agent-skills) workflow. It provides a small set of operations:
 
--   **`/sdd4j setup`** establishes the project context, such as its architecture and the language used for specifications.
--   **`/sdd4j new`** creates the specification for a new Business Component and its testable requirements.
--   **`/sdd4j apply`** looks for divergence between specification tests, and implementation and converge those parts solving the drifts found.
--   **`/sdd4j verify`** looks for executable evidence that declared requirements remain represented by tests and software behavior.
+* **`/sdd4j setup`** establishes the project context, such as its architecture and the language used for specifications.
+* **`/sdd4j new`** creates the specification for a new Business Component and its testable requirements without modifying the code.
+* **`/sdd4j apply`** looks for divergence between the specification, tests, and implementation and resolves the detected drift to bring them back into alignment.
+* **`/sdd4j verify`** looks for executable evidence that the declared requirements remain represented by tests and software behavior.
 
 The language configured during `setup` is also used when writing EARS requirements.
 
@@ -255,7 +255,7 @@ This allows a project configured for PT-BR, for example, to keep its specificati
 
 The same requirement presented earlier could therefore be expressed in an SDD4J project configured for PT-BR as:
 
->"Quando um checkout for solicitado para um carrinho vazio, o BC deverá rejeitar a solicitação."
+> Quando um checkout for solicitado para um carrinho vazio, o Business Component deverá rejeitar a solicitação.
 
 We preserve the same intent:
 
@@ -295,9 +295,7 @@ And keep changes small enough that a human engineer can still understand and rev
 
 ## There Is No Silver Bullet
 
-It would be easy to tell this story as a progression:
-
-we experimented with one approach, found limitations, discovered another, improved upon that idea, and eventually arrived at SDD4J.
+It would be easy to tell this story as a progression: we experimented with one approach, found limitations, discovered another, improved upon that idea, and eventually arrived at SDD4J.
 
 That would be the wrong conclusion.
 
@@ -305,19 +303,21 @@ We did not eliminate the trade-offs.
 
 **We chose different trade-offs.**
 
-SBCE deliberately anchors itself in **BCE** and it's stack neutral, which means, you can use it with Java stacks or any other stack like web-components.
+SBCE deliberately anchors itself in **BCE** while remaining stack-neutral, which means it can be used with Java stacks as well as other technology stacks, such as Web Components.
 
 That gives it a clear definition of a Business Component while allowing technology-specific concerns to vary through skills.
 
-SDD4J deliberately anchors itself in the **Java ecosystem** accepting many architectural flavors.
+SDD4J deliberately anchors itself in the **Java ecosystem** while supporting multiple architectural styles.
 
 That gives us native mechanisms such as `package-info.java` and Javadoc, while allowing the architectural interpretation of a Business Component to vary through adapters.
 
 Neither is universally better.
 
-For a project already organized around BCE, despite the stack, SBCE may be the simpler and more natural choice.
+For a project already organized around BCE, regardless of the technology stack, SBCE may be the simpler and more natural choice.
 
-For an existing Java project organized differently, SDD4J may be an interesting choice. At the end of the day, we need to deal and choose trade-offs.
+For an existing Java project organized around a different architecture, SDD4J may be an interesting choice.
+
+In the end, these are different trade-offs.
 
 And other SDD workflows solve other parts of the problem by choosing different constraints.
 
@@ -345,19 +345,19 @@ SDD4J is our current experiment in that direction, and we invite you to try it o
 
 The workflow is available in the [soujava/agent-skills](https://github.com/soujava/agent-skills) repository, and you can use it in any Java project.
 
-It is open-source, so we welcome contributions :smile:.
+It is open-source and free to use, and we welcome contributions :smile:.
 
-I believe it will evolve; some of its ideas may prove useful, while others might not. But above all, I hope it helps us continue our explorations.
+I believe it will continue to evolve. Some of its ideas may prove useful, while others may not. But above all, I hope it helps us continue exploring these questions.
 
-After all, in a world where coding agents and models are constantly changing how we produce software, SDD4J might eventually become obsolete—and that’s perfectly fine! Workflows should never be permanent artifacts; they should keep evolving!
+In a world where coding agents and models are constantly changing how we build software, SDD4J itself may eventually become obsolete — and that is perfectly fine. Workflows should evolve as our tools, models, and engineering practices evolve.
 
 **Workflows may be temporary, but the software's intent must outlast any workflow.**
 
 ---
 
-## And, what Do You Think?
+## What Do You Think?
 
-This article represents where our experiments have brought us so far: **there's no a definitive answer**.
+This article represents where our experiments have brought us so far: **not a definitive answer**.
 
 And that is precisely why I would like to hear about your experience.
 
@@ -367,7 +367,7 @@ Do you treat the specification as the *source of truth*, or have you also encoun
 
 Have you experimented with Spec-Driven Development, SBCE, OpenSpec, Spec Kit, or a completely different approach?
 
-How about trying out SDD4J in an existing Java project? It might be useful to you, or perhaps not. But either way, I hope it inspires new ideas.
+How about trying SDD4J in an existing Java project? It might be useful to you, or perhaps not. Either way, I hope it inspires new ideas.
 
 And perhaps the question that interests me the most:
 
