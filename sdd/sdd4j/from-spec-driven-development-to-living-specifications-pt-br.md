@@ -295,7 +295,7 @@ Nós não eliminamos os trade-offs.
 
 **Escolhemos trade-offs diferentes.**
 
-O SBCE deliberadamente se ancora na arquitetura **BCE** e é agnóstico em relação à stack tecnológica, o que significa que pode ser utilizado com pilhas Java ou qualquer outra, como a de *web components*.
+O SBCE deliberadamente se ancora na arquitetura **BCE** e é agnóstico em relação à stack tecnológica, o que significa que pode ser utilizado com outras stacks Java ou com qualquer outra stack tecnológica, como a de *web components*.
 
 Isso lhe dá uma definição clara de Business Component e permite que preocupações específicas de tecnologia variem por meio de skills.
 
