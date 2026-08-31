@@ -6,7 +6,7 @@ Conforme comecei a utilizar agentes com mais frequência no desenvolvimento de s
 
 Tentar controlar cada linha de código gerada pelo agente elimina boa parte do valor que ele pode oferecer. Nesse ponto, talvez fosse mais rápido escrever o código nós mesmos.
 
-Por outro lado, apenas descrever um resultado e aceitar qualquer implementação que o produza nos aproxima perigosamente do *vibe coding*. 
+Por outro lado, apenas descrever um resultado e aceitar qualquer implementação que o produza nos aproxima perigosamente do *vibe coding*.
 
 Deve existir algo entre esses dois extremos.
 
@@ -34,7 +34,7 @@ O ciclo avançava progressivamente da intenção do produto até a implementaç�
 
 Em vez de entregar um prompt isolado para o agente e imediatamente pedir código, cada etapa produzia contexto para a próxima.
 
-Conversando com um amigo da comunidade e também contribuidor opensource, [**Matheus Oliveira**](https://www.linkedin.com/in/omatheusmesmo/), decidimos colocar essas ideias em prática.
+Conversando com um amigo da comunidade e também contribuidor open source, [**Matheus Oliveira**](https://www.linkedin.com/in/omatheusmesmo/), decidimos colocar essas ideias em prática.
 
 Materializamos esse ciclo em um conjunto de Agent Skills que chamamos de [**SLDD**](https://github.com/soujava/sldd-skills).
 
@@ -104,9 +104,9 @@ Como expressão da intenção do software, essa pode ser uma ideia interessante,
 
 Isso não torna a especificação inútil. Significa apenas que ela representa um tipo diferente de verdade:
 
--   A especificação descreve o comportamento pretendido.
--   O código implementa o comportamento real.
--   Os testes fornecem evidências executáveis conectando os dois.
+* A especificação descreve o comportamento pretendido.
+* O código implementa o comportamento real.
+* Os testes fornecem evidências executáveis conectando os dois.
 
 Isso nos leva a um modelo que se tornou cada vez mais importante:
 
@@ -116,8 +116,8 @@ Isso nos leva a um modelo que se tornou cada vez mais importante:
 
 E sim, as setas aqui importam, porque software evolui nas duas direções:
 
--   Às vezes, a implementação viola acidentalmente um requisito     existente e o código precisa convergir em direção à especificação.
--   Em outros momentos, a implementação evolui intencionalmente e é a especificação que precisa acompanhar essa mudança.
+* Às vezes, a implementação viola acidentalmente um requisito existente e o código precisa convergir em direção à especificação.
+* Em outros momentos, a implementação evolui intencionalmente e é a especificação que precisa acompanhar essa mudança.
 
 Esse modelo permite transformar a especificação em algo que podemos chamar de **Living Specification**.
 
@@ -177,10 +177,10 @@ O SBCE também reforçou outra lição para nós:
 
 Seu workflow principal é deliberadamente pequeno, fornecendo dois modos:
 
--   **`/sbce new`**
-    -   declara um *Business Component*, escrevendo sua especificação no `package-info.java` de seu pacote;
--   **`/sbce apply`**
-    -   trabalha na convergência dos *drifts* detectados entre especificação e código.
+* **`/sbce new`**
+  * declara um *Business Component*, escrevendo sua especificação no `package-info.java` de seu pacote;
+* **`/sbce apply`**
+  * trabalha na convergência dos *drifts* detectados entre especificação e código.
 
 Outras preocupações, como convenções de código, podem ser delegadas a skills que se compõem, em vez de expandir continuamente um enorme conjunto de instruções.
 
@@ -226,9 +226,11 @@ O adapter responde a uma pergunta arquitetural:
 
 **Onde está o Business Component neste projeto?**
 
--   Em BCE, a própria estrutura BCE já fornece essa delimitação.
--   Em *package by feature*, o próprio pacote da feature pode naturalmente fornecer essa fronteira.
--   Em *package by layer*, uma capacidade de negócio pode estar distribuída entre diversos pacotes técnicos, exigindo outra estratégia de mapeamento.
+No SDD4J, um Business Component representa uma capacidade de negócio. O que varia entre os architecture adapters é a forma como essa capacidade é localizada e delimitada na estrutura existente do projeto.
+
+* Em BCE, a própria estrutura BCE já fornece essa delimitação.
+* Em *package by feature*, o próprio pacote da feature pode naturalmente fornecer essa fronteira.
+* Em *package by layer*, uma capacidade de negócio pode estar distribuída entre diversos pacotes técnicos, exigindo outra estratégia de mapeamento.
 
 Isso é particularmente importante no desenvolvimento *brownfield*.
 
@@ -238,10 +240,10 @@ Logo, **o workflow deveria reconhecer o projeto como ele já é.**
 
 Em torno desse modelo, criamos o workflow [SDD4J](https://github.com/soujava/agent-skills). Ele fornece um pequeno conjunto de operações:
 
--   **`/sdd4j setup`** estabelece o contexto do projeto, como arquitetura e idioma utilizado pelas especificações.
--   **`/sdd4j new`** cria a especificação de um novo Business Component e seus requisitos testáveis sem realizar alterações no código.
--   **`/sdd4j apply`** procura divergências entre especificação, testes e implementação e realiza a convergência resolvendo os drifts encontrados.
--   **`/sdd4j verify`** procura evidências executáveis de que os requisitos declarados continuam representados pelos testes e pelo comportamento do software.
+* **`/sdd4j setup`** estabelece o contexto do projeto, como arquitetura e idioma utilizado pelas especificações.
+* **`/sdd4j new`** cria a especificação de um novo Business Component e seus requisitos testáveis sem realizar alterações no código.
+* **`/sdd4j apply`** procura divergências entre especificação, testes e implementação e realiza a convergência resolvendo os *drifts* encontrados.
+* **`/sdd4j verify`** procura evidências executáveis de que os requisitos declarados continuam representados pelos testes e pelo comportamento do software.
 
 O idioma configurado durante o `setup` também é utilizado na escrita dos requisitos EARS.
 
@@ -305,9 +307,9 @@ Isso nos oferece mecanismos nativos como `package-info.java` e Javadoc, enquanto
 
 Nenhum deles é universalmente melhor.
 
-Para um projeto já organizado em torno de BCE e, independente da stack tecnológica, SBCE pode ser a escolha mais simples e natural.
+Para um projeto já organizado em torno de BCE, independentemente da stack tecnológica, SBCE pode ser a escolha mais simples e natural.
 
-Para um projeto Java existente organizado em uma arquitetura diferente, SDD4J pode ser uma opção interessante de escolha. 
+Para um projeto Java existente organizado em uma arquitetura diferente, SDD4J pode ser uma escolha interessante.
 
 No fim, são trade-offs diferentes.
 
@@ -335,13 +337,13 @@ Hoje, a pergunta que considero mais interessante é:
 
 SDD4J é o nosso experimento atual nessa direção, e convidamos você a experimentá-lo conosco.
 
-O workflow se encontra no repositório [soujava/agent-skills](https://github.com/soujava/agent-skills), e você pode utilizá-lo em qualquer projeto Java. 
+O workflow se encontra no repositório [soujava/agent-skills](https://github.com/soujava/agent-skills), e você pode utilizá-lo em qualquer projeto Java.
 
 É open-source e gratuito, e estamos abertos a contribuições :smile:.
 
-Acredito que ele vai evoluir, algumas de suas ideias podem se mostrar úteis e outras não. Mas, acima de tudo, espero que ele nos ajude a continuar em nossas explorações.
+Acredito que ele vai continuar evoluindo. Algumas de suas ideias podem se mostrar úteis, enquanto outras talvez não. Mas, acima de tudo, espero que ele nos ajude a continuar explorando essas questões.
 
-Até porque, nesse mundo onde agentes de código e modelos estão sempre mudando a forma como produzimos software, pode ser que o SDD4J se torne obsoleto e, estará tudo bem! Até porque workflows nunca deveriam ser artefatos permanentes, e sim continuar evoluindo!
+Em um mundo onde agentes de código e modelos estão constantemente mudando a forma como produzimos software, pode ser que o próprio SDD4J se torne obsoleto algum dia — e tudo bem. Workflows também precisam evoluir à medida que nossas ferramentas, modelos e práticas de engenharia evoluem.
 
 **Workflows podem ser temporários, mas a intenção do software deve sobreviver a qualquer workflow.**
 
