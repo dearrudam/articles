@@ -56,7 +56,7 @@ Seu artigo fez mais do que nos apresentar uma abordagem interessante. Ele nos in
 
 ## O que aprendemos colocando tudo isso em prática
 
-À medida que continuamos experimentando com o SLDD e explorando outras abordagens de Spec-Driven Development, incluindo including [**OpenSpec**](https://openspec.dev/) e [**GitHub Spec Kit**](https://github.github.com/spec-kit/), começamos a prestar menos atenção nas etapas individuais de cada workflow e mais atenção no modelo por trás delas.
+À medida que continuamos experimentando com o SLDD e explorando outras abordagens de Spec-Driven Development, incluindo [**OpenSpec**](https://openspec.dev/) e [**GitHub Spec Kit**](https://github.github.com/spec-kit/), começamos a prestar menos atenção nas etapas individuais de cada workflow e mais atenção no modelo por trás delas.
 
 Especificações podem ser extremamente úteis enquanto uma mudança está acontecendo.
 
