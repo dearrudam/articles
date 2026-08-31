@@ -246,7 +246,7 @@ Around this model, we create [SDD4J](https://github.com/soujava/agent-skills) wo
 
 -   **`/sdd4j setup`** establishes the project context, such as its architecture and the language used for specifications.
 -   **`/sdd4j new`** creates the specification for a new Business Component and its testable requirements.
--   **`/sdd4j apply`** looks for divergence between specification tests, and implementation and helps converge those parts.
+-   **`/sdd4j apply`** looks for divergence between specification tests, and implementation and converge those parts solving the drifts found.
 -   **`/sdd4j verify`** looks for executable evidence that declared requirements remain represented by tests and software behavior.
 
 The language configured during `setup` is also used when writing EARS requirements.
