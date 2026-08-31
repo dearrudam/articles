@@ -226,8 +226,8 @@ O adapter responde a uma pergunta arquitetural:
 
 **Onde está o Business Component neste projeto?**
 
--   Em *package by feature*, o próprio pacote da feature pode naturalmente fornecer essa fronteira.
 -   Em BCE, a própria estrutura BCE já fornece essa delimitação.
+-   Em *package by feature*, o próprio pacote da feature pode naturalmente fornecer essa fronteira.
 -   Em *package by layer*, uma capacidade de negócio pode estar distribuída entre diversos pacotes técnicos, exigindo outra estratégia de mapeamento.
 
 Isso é particularmente importante no desenvolvimento *brownfield*.
