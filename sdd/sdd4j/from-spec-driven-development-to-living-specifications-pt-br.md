@@ -239,8 +239,8 @@ Logo, **o workflow deveria reconhecer o projeto como ele já é.**
 Em torno desse modelo, criamos o workflow [SDD4J](https://github.com/soujava/agent-skills). Ele fornece um pequeno conjunto de operações:
 
 -   **`/sdd4j setup`** estabelece o contexto do projeto, como arquitetura e idioma utilizado pelas especificações.
--   **`/sdd4j new`** cria a especificação de um novo Business Component e seus requisitos testáveis.
--   **`/sdd4j apply`** procura divergências entre especificação, testes e implementação e ajuda a convergir essas partes.
+-   **`/sdd4j new`** cria a especificação de um novo Business Component e seus requisitos testáveis sem realizar alterações no código.
+-   **`/sdd4j apply`** procura divergências entre especificação, testes e implementação e realiza a convergência resolvendo os drifts encontrados.
 -   **`/sdd4j verify`** procura evidências executáveis de que os requisitos declarados continuam representados pelos testes e pelo comportamento do software.
 
 O idioma configurado durante o `setup` também é utilizado na escrita dos requisitos EARS.
